@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Copyright (c) 2024 Douglas Wade Goodall, Usage rights granted by License.
+#
 # Get screen dimensions
 SCREEN_WIDTH=$(xdpyinfo | grep dimensions | awk '{print $2}' | cut -d 'x' -f 1)
 SCREEN_HEIGHT=$(xdpyinfo | grep dimensions | awk '{print $2}' | cut -d 'x' -f 2)
@@ -31,6 +32,7 @@ P6HP=$((WIN_WIDTH))
 
 VCHARS=25
 HCHARS=144
+
 GEOM1=$((HCHARS))x$((VCHARS))+$((P1HP))+$((P1VP))
 GEOM2=$((HCHARS))x$((VCHARS))+$((P2HP))+$((P2VP))
 GEOM3=$((HCHARS))x$((VCHARS))+$((P3HP))+$((P3VP))
@@ -47,3 +49,5 @@ xterm -fg white -bg $COLOR3 -fa 'Monospace' -fs $FS -geometry $GEOM3 -e "ssh use
 xterm -fg white -bg $COLOR4 -fa 'Monospace' -fs $FS -geometry $GEOM4 -e "ssh userp4@192.168.4.251" &
 xterm -fg white -bg $COLOR5 -fa 'Monospace' -fs $FS -geometry $GEOM5 -e "ssh doug@192.168.4.251"   &
 xterm -fg white -bg $COLOR6 -fa 'Monospace' -fs $FS -geometry $GEOM6                               &
+# eof - 
+#
