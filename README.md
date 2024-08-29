@@ -69,6 +69,10 @@ SETTING UP THE SYSTEM FOR THE SCRIPT
         ssh pi@p2
 
       And so on for userp3 and user p4.
+
+    The user-facing machine must also establish credentials with the clusterhat host.
+      I did this with a:
+        ssh-copy-id doug@192.168.4.251  
       
 THEORY OF SCRIPT OPERATION
 
